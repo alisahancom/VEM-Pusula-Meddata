@@ -1,0 +1,18 @@
+program Vem;
+
+uses
+  Vcl.Forms,
+  main in 'main.pas' {f_main},
+  datamodul in 'datamodul.pas' {dm: TDataModule},
+  login in 'login.pas' {f_login};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tf_login, f_login);
+  Application.CreateForm(Tdm, dm);
+  Application.Run;
+
+end.

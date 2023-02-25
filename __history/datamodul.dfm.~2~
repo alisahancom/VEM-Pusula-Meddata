@@ -1,0 +1,9 @@
+object dm: Tdm
+  OldCreateOrder = False
+  Height = 263
+  Width = 421
+  object OraSession1: TOraSession
+    Left = 16
+    Top = 24
+  end
+end

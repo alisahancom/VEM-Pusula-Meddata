@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.255,=D:\Delphi\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.852,D:\Delphi\Unit2.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.421,D:\Delphi\Projeler\VEM\Unit1.dfm=D:\Delphi\Projeler\VEM\datamodul.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.313,D:\Delphi\Projeler\VEM\Unit3.pas=D:\Delphi\Projeler\VEM\main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.403,=D:\Delphi\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.272,D:\Delphi\Projeler\VEM\Vem.dproj=D:\Delphi\Vem.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.352,D:\Delphi\Projeler\VEM\Unit3.pas=D:\Delphi\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.252,=D:\Delphi\Projeler\VEM\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.881,=D:\Delphi\Projeler\VEM\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.313,D:\Delphi\Projeler\VEM\Unit3.dfm=D:\Delphi\Projeler\VEM\main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.352,D:\Delphi\Projeler\VEM\Unit3.dfm=D:\Delphi\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.539,D:\Delphi\Projeler\VEM\Unit2.pas=D:\Delphi\Projeler\VEM\login.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.421,D:\Delphi\Projeler\VEM\Unit1.pas=D:\Delphi\Projeler\VEM\datamodul.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.886,D:\Delphi\Vem.dproj=D:\Delphi\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.539,D:\Delphi\Projeler\VEM\Unit2.dfm=D:\Delphi\Projeler\VEM\login.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,14 @@
+program Vem;
+
+uses
+  Vcl.Forms,
+  Unit3 in 'Unit3.pas' {form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tform1, form1);
+  Application.Run;
+end.

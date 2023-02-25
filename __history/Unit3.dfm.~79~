@@ -1,0 +1,1677 @@
+object form1: Tform1
+  Left = 0
+  Top = 0
+  Caption = 'VEM Veri Analizi <<alisahan.com>>'
+  ClientHeight = 694
+  ClientWidth = 1066
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Visible = True
+  WindowState = wsMaximized
+  OnResize = FormResize
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1066
+    Height = 121
+    Align = alTop
+    Caption = ' '
+    TabOrder = 0
+    object cxGroupBox1: TcxGroupBox
+      Left = 1
+      Top = 1
+      Align = alLeft
+      Caption = 'Hasta Bilgileri'
+      TabOrder = 0
+      Height = 119
+      Width = 745
+      object lb_adisoyadi: TcxLabel
+        Left = 256
+        Top = 20
+        Caption = 'Ad'#305' Soyad'#305
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object lb_anneadi: TcxLabel
+        Left = 256
+        Top = 43
+        Caption = 'Anne Ad'#305
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object lb_babaadi: TcxLabel
+        Left = 256
+        Top = 66
+        Caption = 'Baba Adi'
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object lb_dogum: TcxLabel
+        Left = 400
+        Top = 17
+        Caption = 'Do'#287'um Tarihi'
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object ln_kayitacan: TcxLabel
+        Left = 568
+        Top = 64
+        Caption = 'Ekleyen Kullan'#305'c'#305
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object lb_ulke: TcxLabel
+        Left = 568
+        Top = 17
+        Caption = #220'lke Uyruk'
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object lb_cinsiyet: TcxLabel
+        Left = 400
+        Top = 64
+        Caption = 'Cinsiyet'
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object lb_dogumyeri: TcxLabel
+        Left = 400
+        Top = 40
+        Caption = 'Do'#287'um Yeri'
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object lb_sonkurum: TcxLabel
+        Left = 568
+        Top = 41
+        Caption = 'Son Kurum'
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object cxLabel1: TcxLabel
+        Left = 3
+        Top = 26
+        Caption = 'Hasta Dosya No'
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object cxLabel2: TcxLabel
+        Left = 3
+        Top = 49
+        Caption = 'TC Kimlik No'
+        ParentColor = False
+        Style.Color = clWhite
+      end
+      object cxTextEdit1: TcxTextEdit
+        Left = 90
+        Top = 22
+        TabOrder = 11
+        OnKeyPress = cxTextEdit1KeyPress
+        Width = 121
+      end
+      object cxTextEdit2: TcxTextEdit
+        Left = 90
+        Top = 49
+        TabOrder = 12
+        OnKeyPress = cxTextEdit2KeyPress
+        Width = 121
+      end
+    end
+    object cxGroupBox2: TcxGroupBox
+      Left = 746
+      Top = 1
+      Align = alClient
+      Caption = 'Protokol Bilgileri'
+      TabOrder = 1
+      Height = 119
+      Width = 319
+      object cxGrid1: TcxGrid
+        Left = 3
+        Top = 15
+        Width = 313
+        Height = 95
+        Align = alClient
+        TabOrder = 0
+        object cxGrid1DBTableView1: TcxGridDBTableView
+          OnDblClick = cxGrid1DBTableView1DblClick
+          Navigator.Buttons.CustomButtons = <>
+          OnCellClick = cxGrid1DBTableView1CellClick
+          OnCellDblClick = cxGrid1DBTableView1CellDblClick
+          DataController.DataSource = ds_protokol
+          DataController.Summary.DefaultGroupSummaryItems = <>
+          DataController.Summary.FooterSummaryItems = <>
+          DataController.Summary.SummaryGroups = <>
+          OptionsData.CancelOnExit = False
+          OptionsData.Deleting = False
+          OptionsData.DeletingConfirmation = False
+          OptionsData.Editing = False
+          OptionsData.Inserting = False
+          OptionsView.ColumnAutoWidth = True
+          OptionsView.GroupByBox = False
+          object cxGrid1DBTableView1BASVURU_NO: TcxGridDBColumn
+            DataBinding.FieldName = 'BASVURU_NO'
+            Width = 76
+          end
+          object cxGrid1DBTableView1DOSYA_NO: TcxGridDBColumn
+            DataBinding.FieldName = 'DOSYA_NO'
+            Width = 66
+          end
+          object cxGrid1DBTableView1GTARIH: TcxGridDBColumn
+            DataBinding.FieldName = 'GTARIH'
+            Width = 76
+          end
+          object cxGrid1DBTableView1KURUM_ADI: TcxGridDBColumn
+            DataBinding.FieldName = 'KURUM_ADI'
+            Width = 123
+          end
+          object cxGrid1DBTableView1DOKTOR: TcxGridDBColumn
+            DataBinding.FieldName = 'DOKTOR'
+            Width = 117
+          end
+          object cxGrid1DBTableView1BIRIM_ADI: TcxGridDBColumn
+            DataBinding.FieldName = 'BIRIM_ADI'
+            Width = 226
+          end
+          object cxGrid1DBTableView1TEDAVI: TcxGridDBColumn
+            DataBinding.FieldName = 'TEDAVI'
+            Width = 48
+          end
+        end
+        object cxGrid1Level1: TcxGridLevel
+          GridView = cxGrid1DBTableView1
+        end
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 121
+    Width = 185
+    Height = 573
+    Align = alLeft
+    Caption = ' '
+    TabOrder = 1
+    object cxButton2: TcxButton
+      Left = 1
+      Top = 26
+      Width = 183
+      Height = 25
+      Align = alTop
+      Caption = #304#351'lemler'
+      TabOrder = 0
+      OnClick = cxButton1Click
+    end
+    object cxButton3: TcxButton
+      Left = 1
+      Top = 76
+      Width = 183
+      Height = 25
+      Align = alTop
+      Caption = 'Vezne'
+      TabOrder = 1
+      OnClick = cxButton3Click
+    end
+    object cxButton4: TcxButton
+      Left = 1
+      Top = 101
+      Width = 183
+      Height = 25
+      Align = alTop
+      Caption = 'Epikriz '#304#351'lemleri'
+      Enabled = False
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        61000001CB49444154785E85923D6B145114869FCDEE6464F3412C64095A0829
+        0CB890DEAFC294925A2228D848520811D1C63618B4317F218D3F2085A56C1750
+        B08920696291948A85ABEECC3DE75CD9C3BDB290010F1CDEEA7DE739EF1D628C
+        A469A59DCA5BF6963B73FDB573334BB74AA093B648DA1A7B3BD9FC7AFFAB9166
+        656B1551456448FDED2387BBEF298A69CCCC570DB6D797A781F02F00E0D9DA65
+        00DE3D56AE6C6C820A1F76DFB0717B91C50B0BE479F1F60B8992C9001F512388
+        1255F83E1820A20C478151303446CC22A6963C296572467520881045B0101015
+        FED4017333A8E1411ED044F0F3774550E1E4E080E1E9A9135595A016D1887720
+        7696C01B05A8AA808870B47091E395EB6E88AD969B550D31306D2030F7435916
+        74D71FD27FF214D5C8D1F939E667BB4E6086AB9A9D0DC804F3335D6EBEDCA62C
+        3A8EDCDBD9A1288A648CDE453381A742BB3DC5FEA71F8C0345CDCFA9C75B0B0F
+        569750A39940D30D63BD7BAD875A2E0CFFAA6A22306B0C20135884BDC1092108
+        7510D72A0822CAA33B57730F4D046402EEDDB884F8AD8E8BC5FC84114BDADC01
+        8E9BFFB8F4F6B9FD6CB64682A8663CDFFBEC0655BF1337F9ED968CB85A34009D
+        0CA85EDDEFCF02ED9CFC1F15E017C05FB1F4725F56C31D710000000049454E44
+        AE426082}
+      TabOrder = 2
+    end
+    object cxButton5: TcxButton
+      Left = 1
+      Top = 126
+      Width = 183
+      Height = 25
+      Align = alTop
+      Caption = 'Epikriz'
+      TabOrder = 3
+      OnClick = cxButton5Click
+    end
+    object cxButton6: TcxButton
+      Left = 1
+      Top = 151
+      Width = 183
+      Height = 25
+      Align = alTop
+      Caption = 'Re'#231'ete'
+      TabOrder = 4
+      OnClick = cxButton6Click
+    end
+    object cxButton7: TcxButton
+      Left = 1
+      Top = 201
+      Width = 183
+      Height = 25
+      Align = alTop
+      Caption = 'Tan'#305' Bilgileri'
+      TabOrder = 5
+      OnClick = cxButton7Click
+    end
+    object cxButton8: TcxButton
+      Left = 1
+      Top = 1
+      Width = 183
+      Height = 25
+      Align = alTop
+      Caption = 'Hizmet D'#246'k'#252'm '#304#351'lemleri'
+      Enabled = False
+      OptionsImage.Glyph.SourceDPI = 96
+      OptionsImage.Glyph.Data = {
+        89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF
+        610000001C744558745469746C6500566572746963616C6C3B416C69676E3B42
+        6F74746F6DF2CD02540000019F49444154785EA5913D6B145118859FF9305111
+        B4106B2BCB9422E22E824DB48A7F40ACC44210C12A4508A26061618A48048BC4
+        3F2082081682989042BB5859D8585A2904B333997B8EFBB2B7906557163C7079
+        999739CF9C7BA6B6CD34154301553E5908E89C8D35FF567D7365E17D5915BD20
+        399CAD765E3EFA720568670154C5D0BC7C679510160FD6562F856F5640898DD4
+        F2F5C73BCE9C38876480026016402199E4436C91349C9300B9AC329F4C47B1B3
+        A04B2D0A803BD29404D5BDB50BC3B2E8DB84689AB4BD7EFFF3926D9206C4D4E4
+        04B9AC82FEDD1BCBD8C288272F1EF78023B2E9D4E29CC026548E034A193A0DF8
+        FEEB23A78E9E45C9A3BD08007222A99B5A62699BE4889A905B24015496499100
+        8F4AF464409134BA2B280C3901956CBA34C028FF0D2603AC78F180E373A75100
+        F2971C00351CAB4FC61500131A07A4FD9FCDF6D3E79B3D001BDA41B703FC3ED8
+        3FDC5D7FF6FAA20D10FBB41B631CD06C3DDCBB0ACCFD15AF8DF366E3DB22309F
+        9B37D00498ACFAF2B5DBEE2FDEC2369630464A48F95942CE53C68C760BE7AFB3
+        F7E955517F78BB51F01FFA03B60E24B5EBB247F00000000049454E44AE426082}
+      TabOrder = 6
+    end
+    object cxButton10: TcxButton
+      Left = 1
+      Top = 176
+      Width = 183
+      Height = 25
+      Align = alTop
+      Caption = 'Kons'#252'ltasyon'
+      TabOrder = 7
+      OnClick = cxButton10Click
+    end
+    object cxButton11: TcxButton
+      Left = 1
+      Top = 51
+      Width = 183
+      Height = 25
+      Align = alTop
+      Caption = 'Fatura D'#246'k'#252'm'#252
+      TabOrder = 8
+      OnClick = cxButton11Click
+    end
+  end
+  object Panel3: TPanel
+    Left = 185
+    Top = 121
+    Width = 881
+    Height = 573
+    Align = alClient
+    Caption = ' '
+    TabOrder = 2
+    object cxPageControl1: TcxPageControl
+      Left = 1
+      Top = 1
+      Width = 879
+      Height = 571
+      Align = alClient
+      Color = clWhite
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 0
+      Properties.ActivePage = cxTabSheet8
+      Properties.CustomButtons.Buttons = <>
+      ClientRectBottom = 566
+      ClientRectLeft = 2
+      ClientRectRight = 874
+      ClientRectTop = 28
+      object cxTabSheet1: TcxTabSheet
+        Caption = #304#351'lemler'
+        Color = clWhite
+        ImageIndex = 0
+        ParentColor = False
+        ParentShowHint = False
+        ShowHint = False
+        ExplicitLeft = 4
+        ExplicitTop = 24
+        ExplicitWidth = 871
+        ExplicitHeight = 543
+        object cxGrid2: TcxGrid
+          Left = 0
+          Top = 0
+          Width = 872
+          Height = 538
+          Align = alClient
+          TabOrder = 0
+          ExplicitWidth = 871
+          ExplicitHeight = 543
+          object cxGrid2DBTableView1: TcxGridDBTableView
+            Navigator.Buttons.CustomButtons = <>
+            DataController.DataSource = ds_islem
+            DataController.Summary.DefaultGroupSummaryItems = <
+              item
+                Format = '###.####,## '#8378'  '
+                Kind = skSum
+                Position = spFooter
+                Column = cxGrid2DBTableView1MEDULA_TUTARI
+              end
+              item
+                Format = '###.####,## '#8378'  '
+                Kind = skSum
+                Column = cxGrid2DBTableView1MEDULA_TUTARI
+              end
+              item
+                Format = '###.####,## '#8378'  '
+                Kind = skSum
+                Position = spFooter
+                Column = cxGrid2DBTableView1HASTA_TUTARI
+              end
+              item
+                Format = '###.####,## '#8378'  '
+                Kind = skSum
+                Column = cxGrid2DBTableView1HASTA_TUTARI
+              end
+              item
+                Kind = skCount
+                Column = cxGrid2DBTableView1HASTA_HIZMET_KODU
+              end
+              item
+                Kind = skCount
+                Position = spFooter
+                Column = cxGrid2DBTableView1HASTA_HIZMET_KODU
+              end
+              item
+                Format = '###.####,## '#8378'  '
+                Kind = skSum
+                Position = spFooter
+                Column = cxGrid2DBTableView1KURUM_TUTARI
+              end
+              item
+                Format = '###.####,## '#8378'  '
+                Kind = skSum
+                Column = cxGrid2DBTableView1KURUM_TUTARI
+              end>
+            DataController.Summary.FooterSummaryItems = <
+              item
+                Format = '###.####,## '#8378'  '
+                Kind = skSum
+                Column = cxGrid2DBTableView1MEDULA_TUTARI
+              end
+              item
+                Format = '###.####,## '#8378'  '
+                Kind = skSum
+                Column = cxGrid2DBTableView1HASTA_TUTARI
+              end
+              item
+                Kind = skCount
+                Column = cxGrid2DBTableView1HASTA_HIZMET_KODU
+              end
+              item
+                Format = '###.####,## '#8378'  '
+                Kind = skSum
+                Column = cxGrid2DBTableView1KURUM_TUTARI
+              end>
+            DataController.Summary.SummaryGroups = <>
+            OptionsView.ColumnAutoWidth = True
+            OptionsView.Footer = True
+            OptionsView.GroupByBox = False
+            object cxGrid2DBTableView1HASTA_HIZMET_KODU: TcxGridDBColumn
+              DataBinding.FieldName = 'HASTA_HIZMET_KODU'
+            end
+            object cxGrid2DBTableView1ISLEM_ZAMANI: TcxGridDBColumn
+              DataBinding.FieldName = 'ISLEM_ZAMANI'
+            end
+            object cxGrid2DBTableView1HIZMET_ADI: TcxGridDBColumn
+              DataBinding.FieldName = 'HIZMET_ADI'
+            end
+            object cxGrid2DBTableView1ADET: TcxGridDBColumn
+              DataBinding.FieldName = 'ADET'
+            end
+            object cxGrid2DBTableView1HASTA_TUTARI: TcxGridDBColumn
+              DataBinding.FieldName = 'HASTA_TUTARI'
+            end
+            object cxGrid2DBTableView1KURUM_TUTARI: TcxGridDBColumn
+              DataBinding.FieldName = 'KURUM_TUTARI'
+            end
+            object cxGrid2DBTableView1MEDULA_TUTARI: TcxGridDBColumn
+              DataBinding.FieldName = 'MEDULA_TUTARI'
+            end
+            object cxGrid2DBTableView1IPTAL: TcxGridDBColumn
+              DataBinding.FieldName = 'IPTAL'
+            end
+            object cxGrid2DBTableView1FATURA: TcxGridDBColumn
+              DataBinding.FieldName = 'FATURA'
+            end
+            object cxGrid2DBTableView1KULLANICI_ADI: TcxGridDBColumn
+              DataBinding.FieldName = 'KULLANICI_ADI'
+            end
+            object cxGrid2DBTableView1DOKTOR: TcxGridDBColumn
+              DataBinding.FieldName = 'DOKTOR'
+            end
+          end
+          object cxGrid2Level1: TcxGridLevel
+            GridView = cxGrid2DBTableView1
+          end
+        end
+      end
+      object cxTabSheet2: TcxTabSheet
+        Caption = 'Fatura D'#246'k'#252'm'#252
+        ImageIndex = 1
+        ExplicitLeft = 4
+        ExplicitTop = 24
+        ExplicitWidth = 871
+        ExplicitHeight = 543
+        object cxGrid3: TcxGrid
+          Left = 0
+          Top = 0
+          Width = 872
+          Height = 538
+          Align = alClient
+          TabOrder = 0
+          ExplicitWidth = 871
+          ExplicitHeight = 543
+          object cxGrid3DBTableView1: TcxGridDBTableView
+            Navigator.Buttons.CustomButtons = <>
+            DataController.DataSource = ds_fatura
+            DataController.Summary.DefaultGroupSummaryItems = <
+              item
+                Kind = skCount
+                Column = cxGrid3DBTableView1FATURA_KODU
+              end
+              item
+                Kind = skCount
+                Position = spFooter
+                Column = cxGrid3DBTableView1FATURA_KODU
+              end
+              item
+                Format = '###.####,## '#8378
+                Kind = skSum
+                Position = spFooter
+                Column = cxGrid3DBTableView1FATURA_TUTARI
+              end
+              item
+                Format = '###.####,## '#8378
+                Kind = skSum
+                Column = cxGrid3DBTableView1FATURA_TUTARI
+              end>
+            DataController.Summary.FooterSummaryItems = <
+              item
+                Kind = skCount
+                Column = cxGrid3DBTableView1FATURA_KODU
+              end
+              item
+                Format = '###.####,## '#8378
+                Kind = skSum
+                Column = cxGrid3DBTableView1FATURA_TUTARI
+              end>
+            DataController.Summary.SummaryGroups = <>
+            OptionsData.CancelOnExit = False
+            OptionsData.Deleting = False
+            OptionsData.DeletingConfirmation = False
+            OptionsData.Editing = False
+            OptionsData.Inserting = False
+            OptionsView.ColumnAutoWidth = True
+            OptionsView.GroupByBox = False
+            object cxGrid3DBTableView1FATURA_KODU: TcxGridDBColumn
+              DataBinding.FieldName = 'FATURA_KODU'
+            end
+            object cxGrid3DBTableView1REFERANS_TABLO_ADI: TcxGridDBColumn
+              DataBinding.FieldName = 'REFERANS_TABLO_ADI'
+            end
+            object cxGrid3DBTableView1FATURA_DONEMI: TcxGridDBColumn
+              DataBinding.FieldName = 'FATURA_DONEMI'
+            end
+            object cxGrid3DBTableView1ICMAL_KODU: TcxGridDBColumn
+              DataBinding.FieldName = 'ICMAL_KODU'
+            end
+            object cxGrid3DBTableView1HASTA_BASVURU_KODU: TcxGridDBColumn
+              DataBinding.FieldName = 'HASTA_BASVURU_KODU'
+            end
+            object cxGrid3DBTableView1FATURA_ADI: TcxGridDBColumn
+              DataBinding.FieldName = 'FATURA_ADI'
+            end
+            object cxGrid3DBTableView1FATURA_ZAMANI: TcxGridDBColumn
+              DataBinding.FieldName = 'FATURA_ZAMANI'
+            end
+            object cxGrid3DBTableView1FATURA_TUTARI: TcxGridDBColumn
+              DataBinding.FieldName = 'FATURA_TUTARI'
+            end
+            object cxGrid3DBTableView1FATURA_NUMARASI: TcxGridDBColumn
+              DataBinding.FieldName = 'FATURA_NUMARASI'
+            end
+            object cxGrid3DBTableView1MEDULA_TESLIM_NUMARASI: TcxGridDBColumn
+              DataBinding.FieldName = 'MEDULA_TESLIM_NUMARASI'
+            end
+            object cxGrid3DBTableView1FATURA_KURUM_KODU: TcxGridDBColumn
+              DataBinding.FieldName = 'FATURA_KURUM_KODU'
+            end
+            object cxGrid3DBTableView1EKLEYEN_KULLANICI_KODU: TcxGridDBColumn
+              DataBinding.FieldName = 'EKLEYEN_KULLANICI_KODU'
+            end
+          end
+          object cxGrid3Level1: TcxGridLevel
+            GridView = cxGrid3DBTableView1
+          end
+        end
+      end
+      object cxTabSheet3: TcxTabSheet
+        Caption = 'Vezne Hareketleri'
+        ImageIndex = 2
+        ExplicitLeft = 4
+        ExplicitTop = 24
+        ExplicitWidth = 871
+        ExplicitHeight = 543
+        object cxGrid4: TcxGrid
+          Left = 0
+          Top = 0
+          Width = 872
+          Height = 538
+          Align = alClient
+          TabOrder = 0
+          ExplicitWidth = 871
+          ExplicitHeight = 543
+          object cxGrid4DBTableView1: TcxGridDBTableView
+            Navigator.Buttons.CustomButtons = <>
+            DataController.DataSource = ds_vezne
+            DataController.Summary.DefaultGroupSummaryItems = <
+              item
+                Format = '##.###.## '#8378
+                Kind = skSum
+                Position = spFooter
+                Column = cxGrid4DBTableView1TUTARI
+              end
+              item
+                Format = '##.###.## '#8378
+                Kind = skSum
+                Column = cxGrid4DBTableView1TUTARI
+              end
+              item
+                Kind = skCount
+                Position = spFooter
+                Column = cxGrid4DBTableView1HASTA_BASVURU_KODU
+              end
+              item
+                Kind = skCount
+                Column = cxGrid4DBTableView1HASTA_BASVURU_KODU
+              end>
+            DataController.Summary.FooterSummaryItems = <
+              item
+                Format = '##.###.## '#8378
+                Kind = skSum
+                Column = cxGrid4DBTableView1TUTARI
+              end
+              item
+                Kind = skCount
+                Column = cxGrid4DBTableView1HASTA_BASVURU_KODU
+              end>
+            DataController.Summary.SummaryGroups = <>
+            OptionsData.CancelOnExit = False
+            OptionsData.Deleting = False
+            OptionsData.DeletingConfirmation = False
+            OptionsData.Editing = False
+            OptionsData.Inserting = False
+            OptionsView.ColumnAutoWidth = True
+            OptionsView.GroupByBox = False
+            object cxGrid4DBTableView1HASTA_BASVURU_KODU: TcxGridDBColumn
+              Caption = 'Protokol No'
+              DataBinding.FieldName = 'HASTA_BASVURU_KODU'
+            end
+            object cxGrid4DBTableView1MAKBUZ_NUMARASI: TcxGridDBColumn
+              DataBinding.FieldName = 'MAKBUZ_NUMARASI'
+            end
+            object cxGrid4DBTableView1HIZMET_ADI: TcxGridDBColumn
+              DataBinding.FieldName = 'HIZMET_ADI'
+            end
+            object cxGrid4DBTableView1TUTARI: TcxGridDBColumn
+              DataBinding.FieldName = 'TUTARI'
+            end
+            object cxGrid4DBTableView1KULLANICI_ADI: TcxGridDBColumn
+              DataBinding.FieldName = 'KULLANICI_ADI'
+            end
+            object cxGrid4DBTableView1IPTAL_MI: TcxGridDBColumn
+              DataBinding.FieldName = 'IPTAL_MI'
+            end
+            object cxGrid4DBTableView1IPTAL_ACIKLAMA: TcxGridDBColumn
+              DataBinding.FieldName = 'IPTAL_ACIKLAMA'
+            end
+            object cxGrid4DBTableView1TAHSIL_TURU: TcxGridDBColumn
+              DataBinding.FieldName = 'TAHSIL_TURU'
+            end
+          end
+          object cxGrid4Level1: TcxGridLevel
+            GridView = cxGrid4DBTableView1
+          end
+        end
+      end
+      object cxTabSheet4: TcxTabSheet
+        Caption = 'Hasta Epikriz'
+        ImageIndex = 3
+        object cxMemo1: TcxMemo
+          Left = 0
+          Top = 0
+          Align = alClient
+          Lines.Strings = (
+            'cxMemo1')
+          Properties.ReadOnly = True
+          TabOrder = 0
+          ExplicitWidth = 871
+          ExplicitHeight = 543
+          Height = 538
+          Width = 872
+        end
+      end
+      object cxTabSheet5: TcxTabSheet
+        Caption = 'Re'#231'ete Bilgileri'
+        ImageIndex = 4
+        ExplicitLeft = 4
+        ExplicitTop = 24
+        ExplicitWidth = 871
+        ExplicitHeight = 543
+        object cxGrid5: TcxGrid
+          Left = 0
+          Top = 0
+          Width = 872
+          Height = 538
+          Align = alClient
+          TabOrder = 0
+          ExplicitWidth = 871
+          ExplicitHeight = 543
+          object cxGrid5DBTableView1: TcxGridDBTableView
+            Navigator.Buttons.CustomButtons = <>
+            DataController.DataSource = ds_recete
+            DataController.Summary.DefaultGroupSummaryItems = <>
+            DataController.Summary.FooterSummaryItems = <>
+            DataController.Summary.SummaryGroups = <>
+            OptionsData.CancelOnExit = False
+            OptionsData.Deleting = False
+            OptionsData.DeletingConfirmation = False
+            OptionsData.Editing = False
+            OptionsData.Inserting = False
+            OptionsView.ColumnAutoWidth = True
+            OptionsView.GroupByBox = False
+            object cxGrid5DBTableView1HASTA_BASVURU_KODU: TcxGridDBColumn
+              DataBinding.FieldName = 'HASTA_BASVURU_KODU'
+            end
+            object cxGrid5DBTableView1RECETE_ZAMANI: TcxGridDBColumn
+              DataBinding.FieldName = 'RECETE_ZAMANI'
+            end
+            object cxGrid5DBTableView1ILAC_BARKODU: TcxGridDBColumn
+              DataBinding.FieldName = 'ILAC_BARKODU'
+            end
+            object cxGrid5DBTableView1ILAC_ADI: TcxGridDBColumn
+              DataBinding.FieldName = 'ILAC_ADI'
+            end
+            object cxGrid5DBTableView1DOZ_BIRIMI: TcxGridDBColumn
+              DataBinding.FieldName = 'DOZ_BIRIMI'
+            end
+            object cxGrid5DBTableView1KUTU_ADETI: TcxGridDBColumn
+              DataBinding.FieldName = 'KUTU_ADETI'
+            end
+            object cxGrid5DBTableView1DOZ: TcxGridDBColumn
+              DataBinding.FieldName = 'DOZ'
+            end
+            object cxGrid5DBTableView1RECETE_TURU: TcxGridDBColumn
+              DataBinding.FieldName = 'RECETE_TURU'
+            end
+            object cxGrid5DBTableView1RECETE_ALT_TURU: TcxGridDBColumn
+              DataBinding.FieldName = 'RECETE_ALT_TURU'
+            end
+            object cxGrid5DBTableView1DOKTOR: TcxGridDBColumn
+              DataBinding.FieldName = 'DOKTOR'
+            end
+            object cxGrid5DBTableView1E_RECETE_NUMARASI: TcxGridDBColumn
+              DataBinding.FieldName = 'E_RECETE_NUMARASI'
+            end
+            object cxGrid5DBTableView1SERI_NUMARASI: TcxGridDBColumn
+              DataBinding.FieldName = 'SERI_NUMARASI'
+            end
+            object cxGrid5DBTableView1E_IMZA_DURUMU: TcxGridDBColumn
+              DataBinding.FieldName = 'E_IMZA_DURUMU'
+            end
+            object cxGrid5DBTableView1TAKIP_NUMARASI: TcxGridDBColumn
+              DataBinding.FieldName = 'TAKIP_NUMARASI'
+            end
+          end
+          object cxGrid5Level1: TcxGridLevel
+            GridView = cxGrid5DBTableView1
+          end
+        end
+      end
+      object cxTabSheet6: TcxTabSheet
+        Caption = 'Kons'#252'ltasyon Bilgileri'
+        ImageIndex = 5
+        object cxDBMemo1: TcxDBMemo
+          Left = 0
+          Top = 321
+          Align = alTop
+          DataBinding.DataField = 'CEVAP_NOTU'
+          DataBinding.DataSource = ds_konsul
+          Properties.ReadOnly = True
+          TabOrder = 0
+          ExplicitWidth = 871
+          Height = 214
+          Width = 872
+        end
+        object cxDBMemo2: TcxDBMemo
+          Left = 0
+          Top = 105
+          Align = alTop
+          DataBinding.DataField = 'ISTEK_NOTU'
+          DataBinding.DataSource = ds_konsul
+          Properties.ReadOnly = True
+          TabOrder = 1
+          ExplicitWidth = 871
+          Height = 216
+          Width = 872
+        end
+        object cxGroupBox3: TcxGroupBox
+          Left = 0
+          Top = 0
+          Align = alTop
+          Caption = 'cxGroupBox3'
+          TabOrder = 2
+          ExplicitWidth = 871
+          Height = 105
+          Width = 872
+          object DBNavigator1: TDBNavigator
+            Left = -3
+            Top = 72
+            Width = 224
+            Height = 25
+            DataSource = ds_konsul
+            VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+            TabOrder = 0
+          end
+          object cxDBTextEdit1: TcxDBTextEdit
+            Left = 79
+            Top = 22
+            DataBinding.DataField = 'KONSULTASYON_NO'
+            DataBinding.DataSource = ds_konsul
+            Properties.ReadOnly = True
+            TabOrder = 1
+            Width = 140
+          end
+          object cxDBTextEdit2: TcxDBTextEdit
+            Left = 79
+            Top = 47
+            DataBinding.DataField = 'PROTOKOL_NO'
+            DataBinding.DataSource = ds_konsul
+            Properties.ReadOnly = True
+            TabOrder = 2
+            Width = 140
+          end
+          object cxDBTextEdit3: TcxDBTextEdit
+            Left = 345
+            Top = 24
+            DataBinding.DataField = 'ISTEKTARIHI'
+            DataBinding.DataSource = ds_konsul
+            Properties.ReadOnly = True
+            TabOrder = 3
+            Width = 140
+          end
+          object cxDBTextEdit4: TcxDBTextEdit
+            Left = 345
+            Top = 47
+            DataBinding.DataField = 'CEVABTARIHI'
+            DataBinding.DataSource = ds_konsul
+            Properties.ReadOnly = True
+            TabOrder = 4
+            Width = 140
+          end
+          object cxDBTextEdit5: TcxDBTextEdit
+            Left = 619
+            Top = 24
+            DataBinding.DataField = 'KULLANICI_ADI'
+            DataBinding.DataSource = ds_konsul
+            Properties.ReadOnly = True
+            TabOrder = 5
+            Width = 140
+          end
+          object cxLabel3: TcxLabel
+            Left = 16
+            Top = 24
+            Caption = 'Kons. No'
+            ParentColor = False
+            Style.Color = clWhite
+          end
+          object cxLabel4: TcxLabel
+            Left = 14
+            Top = 49
+            Caption = 'Protokol No'
+            ParentColor = False
+            Style.Color = clWhite
+          end
+          object cxLabel5: TcxLabel
+            Left = 273
+            Top = 24
+            Caption = #304'stek Tarihi'
+            ParentColor = False
+            Style.Color = clWhite
+          end
+          object cxLabel6: TcxLabel
+            Left = 273
+            Top = 47
+            Caption = 'Cevab Tarihi'
+            ParentColor = False
+            Style.Color = clWhite
+          end
+          object cxLabel7: TcxLabel
+            Left = 567
+            Top = 24
+            Caption = #304'steyen '
+            ParentColor = False
+            Style.Color = clWhite
+          end
+        end
+      end
+      object cxTabSheet7: TcxTabSheet
+        Caption = 'Tan'#305' Listesi'
+        ImageIndex = 6
+        ExplicitLeft = 4
+        ExplicitTop = 24
+        ExplicitWidth = 871
+        ExplicitHeight = 543
+        object cxGrid6: TcxGrid
+          Left = 0
+          Top = 0
+          Width = 872
+          Height = 538
+          Align = alClient
+          TabOrder = 0
+          ExplicitWidth = 871
+          ExplicitHeight = 543
+          object cxGrid6DBTableView1: TcxGridDBTableView
+            Navigator.Buttons.CustomButtons = <>
+            DataController.DataSource = ds_tani
+            DataController.Summary.DefaultGroupSummaryItems = <>
+            DataController.Summary.FooterSummaryItems = <>
+            DataController.Summary.SummaryGroups = <>
+            OptionsData.CancelOnExit = False
+            OptionsData.Deleting = False
+            OptionsData.DeletingConfirmation = False
+            OptionsData.Editing = False
+            OptionsData.Inserting = False
+            OptionsView.ColumnAutoWidth = True
+            OptionsView.GroupByBox = False
+            object cxGrid6DBTableView1TANI_KODU: TcxGridDBColumn
+              DataBinding.FieldName = 'TANI_KODU'
+            end
+            object cxGrid6DBTableView1TANI_ZAMANI: TcxGridDBColumn
+              DataBinding.FieldName = 'TANI_ZAMANI'
+            end
+            object cxGrid6DBTableView1RECETE_KODU: TcxGridDBColumn
+              DataBinding.FieldName = 'RECETE_KODU'
+            end
+            object cxGrid6DBTableView1DOKTOR: TcxGridDBColumn
+              DataBinding.FieldName = 'DOKTOR'
+            end
+            object cxGrid6DBTableView1KULLANICI_ADI: TcxGridDBColumn
+              DataBinding.FieldName = 'KULLANICI_ADI'
+            end
+          end
+          object cxGrid6Level1: TcxGridLevel
+            GridView = cxGrid6DBTableView1
+          end
+        end
+      end
+      object cxTabSheet8: TcxTabSheet
+        Caption = 'Laboratuvar Sonu'#231'lar'#305
+        ImageIndex = 7
+        ExplicitLeft = 4
+        ExplicitTop = 24
+        ExplicitWidth = 871
+        ExplicitHeight = 543
+        object cxGrid7: TcxGrid
+          Left = 0
+          Top = 0
+          Width = 872
+          Height = 538
+          Align = alClient
+          TabOrder = 0
+          ExplicitWidth = 871
+          ExplicitHeight = 543
+          object cxGrid7DBTableView1: TcxGridDBTableView
+            Navigator.Buttons.CustomButtons = <>
+            DataController.Summary.DefaultGroupSummaryItems = <>
+            DataController.Summary.FooterSummaryItems = <>
+            DataController.Summary.SummaryGroups = <>
+            OptionsData.CancelOnExit = False
+            OptionsData.Deleting = False
+            OptionsData.DeletingConfirmation = False
+            OptionsData.Editing = False
+            OptionsData.Inserting = False
+            OptionsView.GroupByBox = False
+          end
+          object cxGrid7Level1: TcxGridLevel
+            GridView = cxGrid7DBTableView1
+          end
+        end
+      end
+    end
+  end
+  object OraSession1: TOraSession
+    Username = 'hastane'
+    Server = 'trg'
+    Connected = True
+    Left = 9
+    Top = 65
+    EncryptedPassword = '97FF9EFF8CFF8BFF9EFF91FF9AFF'
+  end
+  object qr_kimlik: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      'SELECT '
+      'a.hasta_kodu, a.referans_tablo_adi, a.tc_kimlik_numarasi, '
+      
+        '   a.uyruk, hasta_tipi, ad||'#39' '#39'||  a.soyad ad, to_date(a.dogum_t' +
+        'arihi,'#39'yyyy.mm.dd'#39') dogum_tarihi, a.dogum_yeri, '
+      
+        '   DECODE(a.cinsiyet,'#39'E'#39','#39'Erkek'#39','#39'K'#39','#39'Kad'#305'n'#39','#39'D'#39','#39'Bilinmiyor'#39',NU' +
+        'LL,'#39'Se'#231'ilmedi'#39')cinsiyet, a.anne_kimlik_numarasi, a.dogum_sirasi,' +
+        ' '
+      '   a.anne_adi, a.baba_adi, a.medeni_hali, '
+      '   a.MESLEK, a.ogrenim_durumu, a.KAN_GRUBU, '
+      '   a.engellilik_durumu, a.olum_tarihi, a.olum_yeri, '
+      
+        '   a.pasaport_numarasi, a.yabanci_hasta_turu, a.yupass_numarasi,' +
+        ' '
+      
+        '   k.kurum_adi son_kurum_kodu ,a.kayit_zamani, U.kullanici_adi e' +
+        'kleyen_kullanici_kodu'
+      
+        'FROM asahan.vem_hasta a,asahan.vem_kurum k,asahan.vem_kullanici ' +
+        'u '
+      'where'
+      
+        ' A.son_kurum_kodu=K.kurum_kodu(+) and A.ekleyen_kullanici_kodu=U' +
+        '.kullanici_kodu(+) and'
+      ' '
+      ' ((a.tc_kimlik_numarasi=:dosya_no) or (a.hasta_kodu=:dosya_no))')
+    Left = 217
+    Top = 17
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'dosya_no'
+        Value = nil
+      end>
+    object qr_kimlikHASTA_KODU: TFloatField
+      FieldName = 'HASTA_KODU'
+      Required = True
+    end
+    object qr_kimlikREFERANS_TABLO_ADI: TStringField
+      FieldName = 'REFERANS_TABLO_ADI'
+      Required = True
+      Size = 11
+    end
+    object qr_kimlikTC_KIMLIK_NUMARASI: TStringField
+      FieldName = 'TC_KIMLIK_NUMARASI'
+      Size = 15
+    end
+    object qr_kimlikUYRUK: TFloatField
+      FieldName = 'UYRUK'
+    end
+    object qr_kimlikHASTA_TIPI: TFloatField
+      FieldName = 'HASTA_TIPI'
+      Required = True
+    end
+    object qr_kimlikAD: TStringField
+      FieldName = 'AD'
+      Size = 101
+    end
+    object qr_kimlikDOGUM_TARIHI: TDateTimeField
+      FieldName = 'DOGUM_TARIHI'
+    end
+    object qr_kimlikDOGUM_YERI: TStringField
+      FieldName = 'DOGUM_YERI'
+      Size = 50
+    end
+    object qr_kimlikCINSIYET: TStringField
+      FieldName = 'CINSIYET'
+      Size = 10
+    end
+    object qr_kimlikANNE_KIMLIK_NUMARASI: TStringField
+      FieldName = 'ANNE_KIMLIK_NUMARASI'
+      Size = 15
+    end
+    object qr_kimlikDOGUM_SIRASI: TFloatField
+      FieldName = 'DOGUM_SIRASI'
+    end
+    object qr_kimlikANNE_ADI: TStringField
+      FieldName = 'ANNE_ADI'
+      Size = 50
+    end
+    object qr_kimlikBABA_ADI: TStringField
+      FieldName = 'BABA_ADI'
+      Size = 50
+    end
+    object qr_kimlikMEDENI_HALI: TFloatField
+      FieldName = 'MEDENI_HALI'
+    end
+    object qr_kimlikMESLEK: TFloatField
+      FieldName = 'MESLEK'
+    end
+    object qr_kimlikOGRENIM_DURUMU: TFloatField
+      FieldName = 'OGRENIM_DURUMU'
+    end
+    object qr_kimlikKAN_GRUBU: TFloatField
+      FieldName = 'KAN_GRUBU'
+    end
+    object qr_kimlikENGELLILIK_DURUMU: TFloatField
+      FieldName = 'ENGELLILIK_DURUMU'
+    end
+    object qr_kimlikOLUM_TARIHI: TDateTimeField
+      FieldName = 'OLUM_TARIHI'
+    end
+    object qr_kimlikOLUM_YERI: TFloatField
+      FieldName = 'OLUM_YERI'
+    end
+    object qr_kimlikPASAPORT_NUMARASI: TStringField
+      FieldName = 'PASAPORT_NUMARASI'
+      Size = 15
+    end
+    object qr_kimlikYABANCI_HASTA_TURU: TFloatField
+      FieldName = 'YABANCI_HASTA_TURU'
+    end
+    object qr_kimlikYUPASS_NUMARASI: TStringField
+      FieldName = 'YUPASS_NUMARASI'
+      Size = 10
+    end
+    object qr_kimlikSON_KURUM_KODU: TStringField
+      FieldName = 'SON_KURUM_KODU'
+      Size = 50
+    end
+    object qr_kimlikKAYIT_ZAMANI: TStringField
+      FieldName = 'KAYIT_ZAMANI'
+      Size = 30
+    end
+    object qr_kimlikEKLEYEN_KULLANICI_KODU: TStringField
+      FieldName = 'EKLEYEN_KULLANICI_KODU'
+      Size = 50
+    end
+  end
+  object qr_protokol: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      'SELECT '
+      'A.hasta_basvuru_kodu basvuru_no ,A.hasta_kodu dosya_no,'
+      
+        'A.kayit_zamani gtarih,K.kurum_adi,P.ad||'#39' '#39'||P.soyad doktor,b.bi' +
+        'rim_adi,decode(a.tedavi_turu,'#39'A'#39','#39'Ayaktan'#39','#39'Y'#39','#39'Yatan'#39')tedavi'
+      
+        'FROM asahan.vem_hasta_basvuru A,asahan.vem_kurum k,asahan.vem_pe' +
+        'rsonel p,asahan.vem_birim b'
+      'WHERE'
+      
+        'A.kurum_kodu=K.kurum_kodu(+) and  A.hekim_kodu=P.personel_kodu(+' +
+        ') and A.klinik_birim_kodu=b.birim_kodu(+) and '
+      ' hasta_kodu = :dosya_no')
+    Active = True
+    Left = 775
+    Top = 72
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'dosya_no'
+        Value = Null
+      end>
+    object qr_protokolBASVURU_NO: TFloatField
+      FieldName = 'BASVURU_NO'
+      Required = True
+    end
+    object qr_protokolDOSYA_NO: TFloatField
+      FieldName = 'DOSYA_NO'
+      Required = True
+    end
+    object qr_protokolGTARIH: TStringField
+      FieldName = 'GTARIH'
+      Size = 30
+    end
+    object qr_protokolKURUM_ADI: TStringField
+      FieldName = 'KURUM_ADI'
+      Size = 50
+    end
+    object qr_protokolDOKTOR: TStringField
+      FieldName = 'DOKTOR'
+      Size = 101
+    end
+    object qr_protokolBIRIM_ADI: TStringField
+      FieldName = 'BIRIM_ADI'
+      Size = 50
+    end
+    object qr_protokolTEDAVI: TStringField
+      FieldName = 'TEDAVI'
+      Size = 7
+    end
+  end
+  object ds_protokol: TOraDataSource
+    DataSet = qr_protokol
+    Left = 935
+    Top = 64
+  end
+  object qr_islem: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      'SELECT '
+      
+        'A.hasta_hizmet_kodu,A.islem_zamani,b.hizmet_adi,a.adet,A.hasta_t' +
+        'utari,nvl(A.kurum_tutari,0) kurum_tutari,nvl(a.medula_tutari,0) ' +
+        'medula_tutari, decode(a.iptal_durumu,0,'#39#39',1,'#39'T'#39') iptal,decode(A.' +
+        'hizmet_fatura_durumu,1,'#39'Kesildi'#39',0,'#39'Yok'#39' )Fatura,'
+      'k.kullanici_adi,'
+      ''
+      'P.ad||'#39' '#39'||P.soyad doktor'
+      
+        'FROM asahan.vem_hasta_hizmet a,asahan.vem_hizmet b,asahan.vem_pe' +
+        'rsonel p,asahan.vem_kullanici k'
+      'where '
+      
+        'A.hizmet_kodu=b.hizmet_kodu(+) and A.isteyen_hekim_kodu=P.person' +
+        'el_kodu(+) and A.ekleyen_kullanici_kodu=K.kullanici_kodu(+) and '
+      'hasta_basvuru_kodu = :protokol_no')
+    Active = True
+    Left = 313
+    Top = 313
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'protokol_no'
+        Value = Null
+      end>
+    object qr_islemHASTA_HIZMET_KODU: TFloatField
+      FieldName = 'HASTA_HIZMET_KODU'
+      Required = True
+    end
+    object qr_islemISLEM_ZAMANI: TStringField
+      FieldName = 'ISLEM_ZAMANI'
+      Size = 30
+    end
+    object qr_islemHIZMET_ADI: TStringField
+      FieldName = 'HIZMET_ADI'
+      Size = 400
+    end
+    object qr_islemADET: TFloatField
+      FieldName = 'ADET'
+      Required = True
+    end
+    object qr_islemHASTA_TUTARI: TFloatField
+      FieldName = 'HASTA_TUTARI'
+    end
+    object qr_islemKURUM_TUTARI: TFloatField
+      FieldName = 'KURUM_TUTARI'
+      DisplayFormat = '###.####,## '#8378'  '
+    end
+    object qr_islemMEDULA_TUTARI: TFloatField
+      FieldName = 'MEDULA_TUTARI'
+      DisplayFormat = '###.####,## '#8378'  '
+    end
+    object qr_islemIPTAL: TStringField
+      FieldName = 'IPTAL'
+      Size = 1
+    end
+    object qr_islemFATURA: TStringField
+      FieldName = 'FATURA'
+      Size = 7
+    end
+    object qr_islemKULLANICI_ADI: TStringField
+      FieldName = 'KULLANICI_ADI'
+      Size = 50
+    end
+    object qr_islemDOKTOR: TStringField
+      FieldName = 'DOKTOR'
+      Size = 101
+    end
+  end
+  object ds_islem: TOraDataSource
+    DataSet = qr_islem
+    Left = 361
+    Top = 321
+  end
+  object dxSkinController1: TdxSkinController
+    NativeStyle = False
+    SkinName = 'Whiteprint'
+    Left = 472
+    Top = 296
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 532
+    Top = 294
+    object ExcelAktar1: TMenuItem
+      Caption = 'Excel Aktar'
+      object lemleriAktar1: TMenuItem
+        Caption = #304#351'lemleri Aktar'
+        OnClick = lemleriAktar1Click
+      end
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 52
+    Top = 70
+  end
+  object qr_fatura: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      'SELECT '
+      'fatura_kodu, referans_tablo_adi, fatura_donemi, '
+      '   icmal_kodu, hasta_basvuru_kodu, fatura_adi, '
+      '   fatura_zamani, fatura_tutari, fatura_numarasi, '
+      
+        '   medula_teslim_numarasi, fatura_kurum_kodu, ekleyen_kullanici_' +
+        'kodu'
+      'FROM asahan.vem_fatura a '
+      'where A.HASTA_BASVURU_KODU=:protokol_no')
+    Active = True
+    Left = 320
+    Top = 616
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'protokol_no'
+        Value = Null
+      end>
+    object qr_faturaFATURA_KODU: TStringField
+      FieldName = 'FATURA_KODU'
+      Size = 21
+    end
+    object qr_faturaREFERANS_TABLO_ADI: TStringField
+      FieldName = 'REFERANS_TABLO_ADI'
+      Required = True
+      Size = 13
+    end
+    object qr_faturaFATURA_DONEMI: TStringField
+      FieldName = 'FATURA_DONEMI'
+      Size = 61
+    end
+    object qr_faturaICMAL_KODU: TFloatField
+      FieldName = 'ICMAL_KODU'
+    end
+    object qr_faturaHASTA_BASVURU_KODU: TFloatField
+      FieldName = 'HASTA_BASVURU_KODU'
+    end
+    object qr_faturaFATURA_ADI: TStringField
+      FieldName = 'FATURA_ADI'
+      Size = 50
+    end
+    object qr_faturaFATURA_ZAMANI: TDateTimeField
+      FieldName = 'FATURA_ZAMANI'
+      Required = True
+    end
+    object qr_faturaFATURA_TUTARI: TFloatField
+      FieldName = 'FATURA_TUTARI'
+    end
+    object qr_faturaFATURA_NUMARASI: TFloatField
+      FieldName = 'FATURA_NUMARASI'
+      Required = True
+    end
+    object qr_faturaMEDULA_TESLIM_NUMARASI: TStringField
+      FieldName = 'MEDULA_TESLIM_NUMARASI'
+    end
+    object qr_faturaFATURA_KURUM_KODU: TFloatField
+      FieldName = 'FATURA_KURUM_KODU'
+    end
+    object qr_faturaEKLEYEN_KULLANICI_KODU: TFloatField
+      FieldName = 'EKLEYEN_KULLANICI_KODU'
+    end
+  end
+  object ds_fatura: TOraDataSource
+    DataSet = qr_fatura
+    Left = 360
+    Top = 616
+  end
+  object qr_vezne: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      'SELECT'
+      'A.hasta_basvuru_kodu,A.makbuz_numarasi,'
+      
+        'hh.hizmet_adi,b.tutari,K.kullanici_adi,A.iptal_mi,A.iptal_acikla' +
+        'ma,A.tahsil_turu'
+      
+        'FROM asahan.vem_vezne a , asahan.vem_vezne_detay b,asahan.vem_ha' +
+        'sta_hizmet h,asahan.vem_hizmet hh,asahan.vem_kullanici k '
+      'where '
+      
+        'A.vezne_kodu=b.vezne_kodu(+) and b.hasta_hizmet_kodu=h.hasta_hiz' +
+        'met_kodu(+) and h.hizmet_kodu=hh.hizmet_kodu(+) and  A.ekleyen_k' +
+        'ullanici_kodu=K.kullanici_kodu(+) and '
+      'A.hasta_basvuru_kodu=:protokol_no')
+    Active = True
+    Left = 316
+    Top = 566
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'protokol_no'
+        Value = Null
+      end>
+    object qr_vezneHASTA_BASVURU_KODU: TFloatField
+      FieldName = 'HASTA_BASVURU_KODU'
+      Required = True
+    end
+    object qr_vezneMAKBUZ_NUMARASI: TFloatField
+      FieldName = 'MAKBUZ_NUMARASI'
+      Required = True
+    end
+    object qr_vezneHIZMET_ADI: TStringField
+      FieldName = 'HIZMET_ADI'
+      Size = 400
+    end
+    object qr_vezneTUTARI: TFloatField
+      FieldName = 'TUTARI'
+    end
+    object qr_vezneKULLANICI_ADI: TStringField
+      FieldName = 'KULLANICI_ADI'
+      Size = 50
+    end
+    object qr_vezneIPTAL_MI: TStringField
+      FieldName = 'IPTAL_MI'
+      Required = True
+      Size = 1
+    end
+    object qr_vezneIPTAL_ACIKLAMA: TStringField
+      FieldName = 'IPTAL_ACIKLAMA'
+      Size = 250
+    end
+    object qr_vezneTAHSIL_TURU: TFloatField
+      FieldName = 'TAHSIL_TURU'
+      Required = True
+    end
+  end
+  object ds_vezne: TOraDataSource
+    DataSet = qr_vezne
+    Left = 356
+    Top = 566
+  end
+  object qr_epikriz: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      'SELECT '
+      
+        'a.hasta_epikriz_kodu, a.referans_tablo_adi, a.hasta_basvuru_kodu' +
+        ', '
+      
+        '   a.epikriz_zamani, a.epikriz_bilgisi_baslik, a.epikriz_bilgisi' +
+        '_aciklama, '
+      
+        '   a.hekim_kodu, a.ekleyen_kullanici_kodu,P.ad||'#39' '#39' ||P.soyad do' +
+        'ktor'
+      'FROM asahan.vem_hasta_epikriz a,asahan.vem_personel p'
+      'where '
+      'A.hekim_kodu=P.personel_kodu(+) and '
+      'A.hasta_basvuru_kodu=:protokol_no')
+    Active = True
+    Left = 316
+    Top = 518
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'protokol_no'
+        Value = Null
+      end>
+    object qr_epikrizHASTA_EPIKRIZ_KODU: TFloatField
+      FieldName = 'HASTA_EPIKRIZ_KODU'
+    end
+    object qr_epikrizREFERANS_TABLO_ADI: TStringField
+      FieldName = 'REFERANS_TABLO_ADI'
+      Size = 19
+    end
+    object qr_epikrizHASTA_BASVURU_KODU: TFloatField
+      FieldName = 'HASTA_BASVURU_KODU'
+    end
+    object qr_epikrizEPIKRIZ_ZAMANI: TStringField
+      FieldName = 'EPIKRIZ_ZAMANI'
+      Size = 30
+    end
+    object qr_epikrizEPIKRIZ_BILGISI_BASLIK: TFloatField
+      FieldName = 'EPIKRIZ_BILGISI_BASLIK'
+    end
+    object qr_epikrizEPIKRIZ_BILGISI_ACIKLAMA: TStringField
+      FieldName = 'EPIKRIZ_BILGISI_ACIKLAMA'
+      Size = 4000
+    end
+    object qr_epikrizHEKIM_KODU: TFloatField
+      FieldName = 'HEKIM_KODU'
+    end
+    object qr_epikrizEKLEYEN_KULLANICI_KODU: TFloatField
+      FieldName = 'EKLEYEN_KULLANICI_KODU'
+    end
+    object qr_epikrizDOKTOR: TStringField
+      FieldName = 'DOKTOR'
+      Size = 101
+    end
+  end
+  object qr_recete: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      'SELECT '
+      ''
+      '  a.hasta_basvuru_kodu,'
+      '   a.recete_zamani, '
+      
+        '   b.ilac_barkodu,b.ilac_adi,b.doz_birimi,b.kutu_adeti,b.ilac_ku' +
+        'llanim_sayisi||'#39' X '#39'||b.ilac_kullanim_dozu doz,'
+      '   a.recete_turu, a.recete_alt_turu, '
+      '   P.ad ||'#39' '#39'||p.soyad doktor, a.e_recete_numarasi, '
+      '   a.seri_numarasi, a.e_imza_durumu, a.takip_numarasi '
+      '  '
+      
+        'FROM asahan.vem_recete a,asahan.vem_recete_ilac b,asahan.vem_per' +
+        'sonel p'
+      'where'
+      
+        'a.recete_kodu=b.recete_kodu(+) and A.hekim_kodu=P.personel_kodu(' +
+        '+) and  '
+      'a.hasta_basvuru_kodu=:protokol_no')
+    Active = True
+    Left = 320
+    Top = 472
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'protokol_no'
+        Value = Null
+      end>
+    object qr_receteHASTA_BASVURU_KODU: TFloatField
+      FieldName = 'HASTA_BASVURU_KODU'
+    end
+    object qr_receteRECETE_ZAMANI: TStringField
+      FieldName = 'RECETE_ZAMANI'
+      Size = 30
+    end
+    object qr_receteILAC_BARKODU: TStringField
+      FieldName = 'ILAC_BARKODU'
+      Size = 50
+    end
+    object qr_receteILAC_ADI: TStringField
+      FieldName = 'ILAC_ADI'
+      Size = 200
+    end
+    object qr_receteDOZ_BIRIMI: TStringField
+      FieldName = 'DOZ_BIRIMI'
+      Size = 30
+    end
+    object qr_receteKUTU_ADETI: TFloatField
+      FieldName = 'KUTU_ADETI'
+    end
+    object qr_receteDOZ: TStringField
+      FieldName = 'DOZ'
+      Size = 83
+    end
+    object qr_receteRECETE_TURU: TFloatField
+      FieldName = 'RECETE_TURU'
+    end
+    object qr_receteRECETE_ALT_TURU: TFloatField
+      FieldName = 'RECETE_ALT_TURU'
+    end
+    object qr_receteDOKTOR: TStringField
+      FieldName = 'DOKTOR'
+      Size = 101
+    end
+    object qr_receteE_RECETE_NUMARASI: TStringField
+      FieldName = 'E_RECETE_NUMARASI'
+      Size = 15
+    end
+    object qr_receteSERI_NUMARASI: TStringField
+      FieldName = 'SERI_NUMARASI'
+      Size = 50
+    end
+    object qr_receteE_IMZA_DURUMU: TFloatField
+      FieldName = 'E_IMZA_DURUMU'
+      Required = True
+    end
+    object qr_receteTAKIP_NUMARASI: TStringField
+      FieldName = 'TAKIP_NUMARASI'
+      Size = 10
+    end
+  end
+  object ds_recete: TOraDataSource
+    DataSet = qr_recete
+    Left = 384
+    Top = 472
+  end
+  object qr_konsul: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      'SELECT '
+      'a.konsultasyon_kodu konsultasyon_no,h.hizmet_adi,'
+      'A.isteyen_hasta_basvuru_kodu protokol_no,'
+      'A.istek_notu,'
+      'A.cevap_notu,'
+      'A.islem_zamani istektarihi,'
+      'A.gelis_zamani cevabtarihi,'
+      'l.kullanici_adi'
+      '   '
+      
+        'FROM asahan.vem_konsultasyon a ,asahan.vem_hasta_hizmet b,asahan' +
+        '.vem_hizmet h,asahan.vem_kullanici l'
+      'where'
+      
+        'A.hasta_hizmet_kodu=b.hasta_hizmet_kodu(+) and b.hizmet_kodu=h.h' +
+        'izmet_kodu(+) and  A.ekleyen_kullanici_kodu=l.kullanici_kodu(+) ' +
+        'and '
+      'A.isteyen_hasta_basvuru_kodu=:protokol_no')
+    Active = True
+    Left = 316
+    Top = 414
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'protokol_no'
+        Value = Null
+      end>
+    object qr_konsulKONSULTASYON_NO: TFloatField
+      FieldName = 'KONSULTASYON_NO'
+      Required = True
+    end
+    object qr_konsulHIZMET_ADI: TStringField
+      FieldName = 'HIZMET_ADI'
+      Size = 400
+    end
+    object qr_konsulPROTOKOL_NO: TFloatField
+      FieldName = 'PROTOKOL_NO'
+      Required = True
+    end
+    object qr_konsulISTEK_NOTU: TStringField
+      FieldName = 'ISTEK_NOTU'
+      Required = True
+      Size = 4000
+    end
+    object qr_konsulCEVAP_NOTU: TStringField
+      FieldName = 'CEVAP_NOTU'
+      Size = 4000
+    end
+    object qr_konsulISTEKTARIHI: TStringField
+      FieldName = 'ISTEKTARIHI'
+      Size = 30
+    end
+    object qr_konsulCEVABTARIHI: TStringField
+      FieldName = 'CEVABTARIHI'
+      Size = 30
+    end
+    object qr_konsulKULLANICI_ADI: TStringField
+      FieldName = 'KULLANICI_ADI'
+      Size = 50
+    end
+  end
+  object ds_konsul: TOraDataSource
+    DataSet = qr_konsul
+    Left = 364
+    Top = 414
+  end
+  object qr_tani: TOraQuery
+    Session = OraSession1
+    SQL.Strings = (
+      'SELECT '
+      'A.tani_kodu,A.tani_zamani,A.recete_kodu,'
+      'P.ad||'#39' '#39'||P.soyad doktor,'
+      ' '
+      'l.kullanici_adi'
+      '   '
+      
+        'FROM asahan.vem_basvuru_tani a ,asahan.vem_personel p,asahan.vem' +
+        '_kullanici l'
+      'where'
+      'A.hekim_kodu =p.personel_kodu(+) and '
+      ' A.ekleyen_kullanici_kodu=l.kullanici_kodu(+) and '
+      'A.hasta_basvuru_kodu =:protokol_no')
+    Active = True
+    Left = 316
+    Top = 366
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'protokol_no'
+        Value = Null
+      end>
+    object qr_taniTANI_KODU: TStringField
+      FieldName = 'TANI_KODU'
+      Size = 15
+    end
+    object qr_taniTANI_ZAMANI: TStringField
+      FieldName = 'TANI_ZAMANI'
+      Size = 30
+    end
+    object qr_taniRECETE_KODU: TFloatField
+      FieldName = 'RECETE_KODU'
+    end
+    object qr_taniDOKTOR: TStringField
+      FieldName = 'DOKTOR'
+      Size = 101
+    end
+    object qr_taniKULLANICI_ADI: TStringField
+      FieldName = 'KULLANICI_ADI'
+      Size = 50
+    end
+  end
+  object ds_tani: TOraDataSource
+    DataSet = qr_tani
+    Left = 364
+    Top = 366
+  end
+end
